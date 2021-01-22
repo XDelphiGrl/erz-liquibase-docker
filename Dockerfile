@@ -26,10 +26,10 @@ ARG LIQUIBASE_VERSION=liquibase-4.3.0-DAT-5700-SNAPSHOT
 
 # Download, verify, extract
 RUN set -x \
-  && wget --auth-no-challenge --user=XDelphiGrl --password=118016e91f23b6d523e1bf0bea0268155b https://jenkins.datical.net/job/liquibase-pro/job/DAT-5700/13/artifact/liquibase/liquibase-dist/target/liquibase-4.3.0-DAT-5700-SNAPSHOT.jar
-  && echo "liquibase-${LIQUIBASE_VERSION}.tar.gz" \
-  && tar -xzf liquibase-${LIQUIBASE_VERSION}.tar.gz \
-  && rm liquibase-${LIQUIBASE_VERSION}.tar.gz
+  && wget --auth-no-challenge --user=XDelphiGrl --password=118016e91f23b6d523e1bf0bea0268155b "https://jenkins.datical.net/job/liquibase-pro/job/DAT-5700/13/artifact/liquibase/liquibase-dist/target/liquibase-4.3.0-DAT-5700-SNAPSHOT.tar.gz" \
+  && echo "liquibase-liquibase-4.3.0-DAT-5700-SNAPSHOT.tar.gz" \
+  && tar -xzf liquibase-4.3.0-DAT-5700-SNAPSHOT.tar.gz \
+  && rm liquibase-4.3.0-DAT-5700-SNAPSHOT.tar.gz
 
 # Download JDBC libraries, verify via GPG and checksum
 ARG PG_SHA1=a0a9c1d43c7727eeaf1b729477891185d3c71751
