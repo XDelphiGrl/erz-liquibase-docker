@@ -27,7 +27,7 @@ ARG LIQUIBASE_VERSION=liquibase-4.3.0-DAT-5700-SNAPSHOT
 # Download, verify, extract
 RUN set -x \
   && wget -O liquibase-${LIQUIBASE_VERSION}.tar.gz "https://jenkins.datical.net/job/liquibase-pro/job/DAT-5700/13/artifact/liquibase/liquibase-dist/target/${LIQUIBASE_VERSION}/liquibase-${LIQUIBASE_VERSION}.tar.gz" \
-  && echo liquibase-${LIQUIBASE_VERSION}.tar.gz" \
+  && echo "liquibase-${LIQUIBASE_VERSION}.tar.gz" \
   && tar -xzf liquibase-${LIQUIBASE_VERSION}.tar.gz \
   && rm liquibase-${LIQUIBASE_VERSION}.tar.gz
 
