@@ -101,5 +101,3 @@ VOLUME /liquibase/changelog
 
 ENTRYPOINT ["/liquibase/docker-entrypoint.sh"]
 CMD ["--help"]
-CMD ["--version"]
-CMD [--logLevel=FINE --url="url=jdbc:h2:tcp://localhost:9090/mem:dev" --changeLogFile=liquibase/changelog/samplechangelog.h2.sql --username=dbuser --password=letmein update
