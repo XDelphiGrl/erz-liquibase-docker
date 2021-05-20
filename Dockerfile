@@ -26,10 +26,10 @@ ARG LIQUIBASE_VERSION=liquibase-4.4.0-DAT-6750-SNAPSHOT
 
 # Download, verify, extract
 RUN set -x \
-  && wget --auth-no-challenge --user=XDelphiGrl --password=${{secrets.XDELPHIGRL_JENKINS}} -O ${LIQUIBASE_VERSION}.tar.gz "https://jenkins.datical.net/job/liquibase-pro/job/DAT-6750/75/artifact/liquibase/liquibase-dist/target/${LIQUIBASE_VERSION}/${LIQUIBASE_VERSION}.tar.gz" \
-  && echo "liquibase-${LIQUIBASE_VERSION}.tar.gz" \
-  && tar -xzf liquibase-${LIQUIBASE_VERSION}.tar.gz \
-  && rm liquibase-${LIQUIBASE_VERSION}.tar.gz
+  && wget --auth-no-challenge --user=XDelphiGrl --password=${{secrets.XDELPHIGRL_JENKINS}} -O liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz "https://jenkins.datical.net/job/liquibase-pro/job/DAT-6750/75/artifact/liquibase/liquibase-dist/target/liquibase-4.4.0-DAT-6750-SNAPSHOT/liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz" \
+  && echo "liquibase-liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz" \
+  && tar -xzf liquibase-liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz \
+  && rm liquibase-liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz
 
 # Download JDBC libraries, verify via GPG and checksum
 ARG PG_SHA1=a0a9c1d43c7727eeaf1b729477891185d3c71751
