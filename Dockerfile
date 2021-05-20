@@ -22,11 +22,11 @@ RUN ln -s /liquibase/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh \
 USER liquibase
 
 # Latest Liquibase Release Version
-ARG LIQUIBASE_VERSION=liquibase-4.3.0-DAT-5700-SNAPSHOT
+ARG LIQUIBASE_VERSION=liquibase-4.4.0-DAT-6750-SNAPSHOT
 
 # Download, verify, extract
 RUN set -x \
-  && wget -O liquibase-${LIQUIBASE_VERSION}.tar.gz "https://jenkins.datical.net/job/liquibase-pro/job/DAT-5700/13/artifact/liquibase/liquibase-dist/target/${LIQUIBASE_VERSION}/liquibase-${LIQUIBASE_VERSION}.tar.gz" \
+  && wget --auth-no-challenge --user=XDelphiGrl --password=${{secrets.XDELPHIGRL_JENKINS}} -O liquibase-${LIQUIBASE_VERSION}.tar.gz "https://jenkins.datical.net/job/liquibase-pro/job/DAT-6750/75/artifact/liquibase/liquibase-dist/target/${LIQUIBASE_VERSION}/liquibase-${LIQUIBASE_VERSION}.tar.gz" \
   && echo liquibase-${LIQUIBASE_VERSION}.tar.gz" \
   && tar -xzf liquibase-${LIQUIBASE_VERSION}.tar.gz \
   && rm liquibase-${LIQUIBASE_VERSION}.tar.gz
