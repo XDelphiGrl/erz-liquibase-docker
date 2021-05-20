@@ -26,7 +26,7 @@ ARG LIQUIBASE_VERSION=liquibase-4.4.0-DAT-6750-SNAPSHOT
 
 # Download, verify, extract
 RUN set -x \
-  && wget --auth-no-challenge --user=XDelphiGrl --password=${{secrets.XDELPHIGRL_JENKINS}} "https://jenkins.datical.net/job/liquibase-pro/job/DAT-6750/75/artifact/liquibase/liquibase-dist/target/liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz" \
+  && wget --auth-no-challenge --user=XDelphiGrl --password=11b0c103c3c8942bfe4ac2aff4487d8cfe "https://jenkins.datical.net/job/liquibase-pro/job/DAT-6750/75/artifact/liquibase/liquibase-dist/target/liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz" \
   && echo "liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz" \
   && tar -xzf liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz \
   && rm liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz
