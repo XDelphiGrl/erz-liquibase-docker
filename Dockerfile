@@ -23,12 +23,12 @@ RUN ln -s /liquibase/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh \
 USER liquibase
 
 # Latest Liquibase Release Version
-ARG LIQUIBASE_VERSION=liquibase-4.4.0-DAT-6750-SNAPSHOT
+ARG LIQUIBASE_VERSION=4.4.0-DAT-6750-SNAPSHOT
 
 # Download, verify, extract
 ARG LB_SHA256=5ce62afa9efa5c5b7b8f8a31302959a31e70b1a5ee579a2f701ea464984c0655
 RUN set -x \
-  && wget --auth-no-challenge --user=XDelphiGrl --password=11b0c103c3c8942bfe4ac2aff4487d8cfe "https://jenkins.datical.net/job/liquibase-pro/job/DAT-6750/75/artifact/liquibase/liquibase-dist/target/liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz" \
+  && wget --auth-no-challenge --user=XDelphiGrl --password=1134c5ff3b0a197de3ddeaf2ab17d3f1ae "https://jenkins.datical.net/job/liquibase-pro/job/DAT-6750/102/artifact/liquibase/liquibase-dist/target/liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz" \
   && echo "liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz" \
   && tar -xzf liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz \
   && rm liquibase-4.4.0-DAT-6750-SNAPSHOT.tar.gz
